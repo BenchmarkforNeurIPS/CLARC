@@ -1,0 +1,262 @@
+{
+    "@context": {
+        "@language": "en",
+        "@vocab": "https://schema.org/",
+        "arrayShape": "cr:arrayShape",
+        "citeAs": "cr:citeAs",
+        "column": "cr:column",
+        "conformsTo": "dct:conformsTo",
+        "cr": "http://mlcommons.org/croissant/",
+        "data": {
+            "@id": "cr:data",
+            "@type": "@json"
+        },
+        "dataBiases": "cr:dataBiases",
+        "dataCollection": "cr:dataCollection",
+        "dataType": {
+            "@id": "cr:dataType",
+            "@type": "@vocab"
+        },
+        "dct": "http://purl.org/dc/terms/",
+        "extract": "cr:extract",
+        "field": "cr:field",
+        "fileProperty": "cr:fileProperty",
+        "fileObject": "cr:fileObject",
+        "fileSet": "cr:fileSet",
+        "format": "cr:format",
+        "includes": "cr:includes",
+        "isArray": "cr:isArray",
+        "isLiveDataset": "cr:isLiveDataset",
+        "jsonPath": "cr:jsonPath",
+        "key": "cr:key",
+        "md5": "cr:md5",
+        "parentField": "cr:parentField",
+        "path": "cr:path",
+        "personalSensitiveInformation": "cr:personalSensitiveInformation",
+        "recordSet": "cr:recordSet",
+        "references": "cr:references",
+        "regex": "cr:regex",
+        "repeated": "cr:repeated",
+        "replace": "cr:replace",
+        "sc": "https://schema.org/",
+        "separator": "cr:separator",
+        "source": "cr:source",
+        "subField": "cr:subField",
+        "transform": "cr:transform"
+    },
+    "@type": "sc:Dataset",
+    "distribution": [
+        {
+            "@type": "cr:FileObject",
+            "@id": "repo",
+            "name": "repo",
+            "description": "The Hugging Face git repository.",
+            "contentUrl": "https://huggingface.co/datasets/Benchmarkfor/CLARC/tree/refs%2Fconvert%2Fparquet",
+            "encodingFormat": "git+https",
+            "sha256": "https://github.com/mlcommons/croissant/issues/80"
+        },
+        {
+            "@type": "cr:FileSet",
+            "@id": "parquet-files-for-config-default",
+            "containedIn": {
+                "@id": "repo"
+            },
+            "encodingFormat": "application/x-parquet",
+            "includes": "default/*/*.parquet"
+        }
+    ],
+    "recordSet": [
+        {
+            "@type": "cr:RecordSet",
+            "dataType": "cr:Split",
+            "key": {
+                "@id": "default_splits/split_name"
+            },
+            "@id": "default_splits",
+            "name": "default_splits",
+            "description": "Splits for the default config.",
+            "field": [
+                {
+                    "@type": "cr:Field",
+                    "@id": "default_splits/split_name",
+                    "dataType": "sc:Text"
+                }
+            ],
+            "data": [
+                {
+                    "default_splits/split_name": "group1_asm_long"
+                },
+                {
+                    "default_splits/split_name": "group1_asm_short"
+                },
+                {
+                    "default_splits/split_name": "group1_hash_renamed"
+                },
+                {
+                    "default_splits/split_name": "group1_original"
+                },
+                {
+                    "default_splits/split_name": "group1_neutral_renamed"
+                },
+                {
+                    "default_splits/split_name": "group1_wasm"
+                },
+                {
+                    "default_splits/split_name": "group2_asm_long"
+                },
+                {
+                    "default_splits/split_name": "group2_asm_short"
+                },
+                {
+                    "default_splits/split_name": "group2_hash_renamed"
+                },
+                {
+                    "default_splits/split_name": "group2_original"
+                },
+                {
+                    "default_splits/split_name": "group2_neutral_renamed"
+                },
+                {
+                    "default_splits/split_name": "group2_wasm"
+                },
+                {
+                    "default_splits/split_name": "group3_asm_long"
+                },
+                {
+                    "default_splits/split_name": "group3_asm_short"
+                },
+                {
+                    "default_splits/split_name": "group3_helper_as_other_candidates_hash_renamed"
+                },
+                {
+                    "default_splits/split_name": "group3_helper_as_other_candidates_original"
+                },
+                {
+                    "default_splits/split_name": "group3_helper_as_other_candidates_neutral_renamed"
+                },
+                {
+                    "default_splits/split_name": "group3_helper_as_part_of_groundtruth_hash_renamed"
+                },
+                {
+                    "default_splits/split_name": "group3_helper_as_part_of_groundtruth_original"
+                },
+                {
+                    "default_splits/split_name": "group3_helper_as_part_of_groundtruth_neutral_renamed"
+                },
+                {
+                    "default_splits/split_name": "group3_helper_as_part_of_groundtruth_wasm"
+                }
+            ]
+        },
+        {
+            "@type": "cr:RecordSet",
+            "@id": "default",
+            "description": "Benchmarkfor/CLARC - 'default' subset\n\nAdditional information:\n- 21 splits: group1_asm_long, group1_asm_short, group1_hash_renamed, group1_original, group1_neutral_renamed, group1_wasm, group2_asm_long, group2_asm_short, group2_hash_renamed, group2_original, group2_neutral_renamed, group2_wasm, group3_asm_long, group3_asm_short, group3_helper_as_other_candidates_hash_renamed, group3_helper_as_other_candidates_original, group3_helper_as_other_candidates_neutral_renamed, group3_helper_as_part_of_groundtruth_hash_renamed, group3_helper_as_part_of_groundtruth_original, group3_helper_as_part_of_groundtruth_neutral_renamed, group3_helper_as_part_of_groundtruth_wasm",
+            "field": [
+                {
+                    "@type": "cr:Field",
+                    "@id": "default/split",
+                    "dataType": "sc:Text",
+                    "source": {
+                        "fileSet": {
+                            "@id": "parquet-files-for-config-default"
+                        },
+                        "extract": {
+                            "fileProperty": "fullpath"
+                        },
+                        "transform": {
+                            "regex": "default/(?:partial-)?(group1_asm_long|group1_asm_short|group1_hash_renamed|group1_original|group1_neutral_renamed|group1_wasm|group2_asm_long|group2_asm_short|group2_hash_renamed|group2_original|group2_neutral_renamed|group2_wasm|group3_asm_long|group3_asm_short|group3_helper_as_other_candidates_hash_renamed|group3_helper_as_other_candidates_original|group3_helper_as_other_candidates_neutral_renamed|group3_helper_as_part_of_groundtruth_hash_renamed|group3_helper_as_part_of_groundtruth_original|group3_helper_as_part_of_groundtruth_neutral_renamed|group3_helper_as_part_of_groundtruth_wasm)/.+parquet$"
+                        }
+                    },
+                    "references": {
+                        "field": {
+                            "@id": "default_splits/split_name"
+                        }
+                    }
+                },
+                {
+                    "@type": "cr:Field",
+                    "@id": "default/query_id",
+                    "dataType": "sc:Text",
+                    "source": {
+                        "fileSet": {
+                            "@id": "parquet-files-for-config-default"
+                        },
+                        "extract": {
+                            "column": "query_id"
+                        }
+                    }
+                },
+                {
+                    "@type": "cr:Field",
+                    "@id": "default/query_text",
+                    "dataType": "sc:Text",
+                    "source": {
+                        "fileSet": {
+                            "@id": "parquet-files-for-config-default"
+                        },
+                        "extract": {
+                            "column": "query_text"
+                        }
+                    }
+                },
+                {
+                    "@type": "cr:Field",
+                    "@id": "default/code_id",
+                    "dataType": "sc:Text",
+                    "source": {
+                        "fileSet": {
+                            "@id": "parquet-files-for-config-default"
+                        },
+                        "extract": {
+                            "column": "code_id"
+                        }
+                    }
+                },
+                {
+                    "@type": "cr:Field",
+                    "@id": "default/code_text",
+                    "dataType": "sc:Text",
+                    "source": {
+                        "fileSet": {
+                            "@id": "parquet-files-for-config-default"
+                        },
+                        "extract": {
+                            "column": "code_text"
+                        }
+                    }
+                },
+                {
+                    "@type": "cr:Field",
+                    "@id": "default/relevance",
+                    "dataType": "cr:Int64",
+                    "source": {
+                        "fileSet": {
+                            "@id": "parquet-files-for-config-default"
+                        },
+                        "extract": {
+                            "column": "relevance"
+                        }
+                    }
+                }
+            ]
+        }
+    ],
+    "conformsTo": "http://mlcommons.org/croissant/1.1",
+    "name": "CLARC",
+    "description": "Benchmarkfor/CLARC dataset hosted on Hugging Face and contributed by the HF Datasets community",
+    "alternateName": [
+        "Benchmarkfor/CLARC"
+    ],
+    "creator": {
+        "@type": "Person",
+        "name": "NeurIPS",
+        "url": "https://huggingface.co/Benchmarkfor"
+    },
+    "keywords": [
+        "cc-by-sa-4.0",
+        "\ud83c\uddfa\ud83c\uddf8 Region: US"
+    ],
+    "license": "https://choosealicense.com/licenses/cc-by-sa-4.0/",
+    "url": "https://huggingface.co/datasets/Benchmarkfor/CLARC"
+}
