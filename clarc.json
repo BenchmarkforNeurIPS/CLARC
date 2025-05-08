@@ -51,7 +51,7 @@
             "@id": "repo",
             "name": "repo",
             "description": "The Hugging Face git repository.",
-            "contentUrl": "https://huggingface.co/datasets/Benchmarkfor/CLARC/tree/refs%2Fconvert%2Fparquet",
+            "contentUrl": "https://huggingface.co/datasets/ClarcTeam/CLARC/tree/refs%2Fconvert%2Fparquet",
             "encodingFormat": "git+https",
             "sha256": "https://github.com/mlcommons/croissant/issues/80"
         },
@@ -151,7 +151,7 @@
         {
             "@type": "cr:RecordSet",
             "@id": "default",
-            "description": "Benchmarkfor/CLARC - 'default' subset\n\nAdditional information:\n- 21 splits: group1_asm_long, group1_asm_short, group1_hash_renamed, group1_original, group1_neutral_renamed, group1_wasm, group2_asm_long, group2_asm_short, group2_hash_renamed, group2_original, group2_neutral_renamed, group2_wasm, group3_asm_long, group3_asm_short, group3_helper_as_other_candidates_hash_renamed, group3_helper_as_other_candidates_original, group3_helper_as_other_candidates_neutral_renamed, group3_helper_as_part_of_groundtruth_hash_renamed, group3_helper_as_part_of_groundtruth_original, group3_helper_as_part_of_groundtruth_neutral_renamed, group3_helper_as_part_of_groundtruth_wasm",
+            "description": "ClarcTeam/CLARC - 'default' subset\n\nAdditional information:\n- 21 splits: group1_asm_long, group1_asm_short, group1_hash_renamed, group1_original, group1_neutral_renamed, group1_wasm, group2_asm_long, group2_asm_short, group2_hash_renamed, group2_original, group2_neutral_renamed, group2_wasm, group3_asm_long, group3_asm_short, group3_helper_as_other_candidates_hash_renamed, group3_helper_as_other_candidates_original, group3_helper_as_other_candidates_neutral_renamed, group3_helper_as_part_of_groundtruth_hash_renamed, group3_helper_as_part_of_groundtruth_original, group3_helper_as_part_of_groundtruth_neutral_renamed, group3_helper_as_part_of_groundtruth_wasm",
             "field": [
                 {
                     "@type": "cr:Field",
@@ -244,19 +244,26 @@
     ],
     "conformsTo": "http://mlcommons.org/croissant/1.1",
     "name": "CLARC",
-    "description": "Benchmarkfor/CLARC dataset hosted on Hugging Face and contributed by the HF Datasets community",
+    "description": "ClarcTeam/CLARC dataset hosted on Hugging Face and contributed by the HF Datasets community",
     "alternateName": [
-        "Benchmarkfor/CLARC"
+        "ClarcTeam/CLARC"
     ],
     "creator": {
         "@type": "Person",
-        "name": "NeurIPS",
-        "url": "https://huggingface.co/Benchmarkfor"
+        "name": "ClarcTeam",
+        "url": "https://huggingface.co/ClarcTeam"
     },
     "keywords": [
         "cc-by-sa-4.0",
+        "100K - 1M",
+        "json",
+        "Text",
+        "Datasets",
+        "pandas",
+        "Croissant",
+        "Polars",
         "\ud83c\uddfa\ud83c\uddf8 Region: US"
     ],
     "license": "https://choosealicense.com/licenses/cc-by-sa-4.0/",
-    "url": "https://huggingface.co/datasets/Benchmarkfor/CLARC"
+    "url": "https://huggingface.co/datasets/ClarcTeam/CLARC"
 }
